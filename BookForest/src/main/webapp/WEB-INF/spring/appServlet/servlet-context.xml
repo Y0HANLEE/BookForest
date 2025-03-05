@@ -23,6 +23,18 @@
 	
 	<context:component-scan base-package="org.mall.controller" />
 	
+	<!-- File Upload -->
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 인코딩:UTF-8 한글깨짐방지 -->
+		<beans:property name="defaultEncoding" value="utf-8"></beans:property>
+		<!-- 10MB 1024*1024*10 bytes -->
+		<beans:property name="maxUploadSize" value="20971520"></beans:property>
+		<!-- 10MB 1024*1024*2 bytes -->	
+		<beans:property name="maxUploadSizePerFile" value="104857560"></beans:property>
+		<beans:property name="uploadTempDir" value="file:/C:/upload/temp"></beans:property>
+		<!-- 1MB 1024*1024*1 bytes -->
+		<beans:property name="maxInMemorySize" value="10485756"></beans:property>
+	</beans:bean>
 	
 	
 </beans:beans>
