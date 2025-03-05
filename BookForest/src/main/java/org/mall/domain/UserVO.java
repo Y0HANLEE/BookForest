@@ -6,12 +6,13 @@ import lombok.Data;
 
 @Data
 public class UserVO {
-	private int mno;		//primary
+	private int uno;		//primary
 	private String userid;	//unique
 	private String userpw;
 	private String name;
 	private Date birth;
 	private String phone;
+	private String email;
 	private String addr1;
 	private String addr2;
 	private String addr3;
