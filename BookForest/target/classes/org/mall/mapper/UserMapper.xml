@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.mall.mapper.UserMapper">
+	<insert id="insert">
+		<selectKey keyProperty="uno" resultType="int" order="BEFORE">
+			select seq_users.nextval from dual
+		</selectKey>
+		insert into users(uno, userid, userpw, name, birth, phone, email, addr1, addr2, addr3) 
+		values (#{uno}, #{userid}, #{userpw}, #{name}, #{birth}, #{phone}, #{email}, #{addr1}, #{addr2}, #{addr3})
+	</insert>
+	
+	<select id="read" resultType="UserVO">
+		select * from users where userid=#{userid}
+	</select>
+	
+	<update id="update">
+		update users set 
+			userpw=NVL(#{userpw}, userpw), 
+			name=NVL(#{name}, name), 
+			phone=NVL(#{phone}, phone), 
+			email=NVL(#{email}, email), 
+			addr1=NVL(#{addr1}, addr1), 
+			addr2=NVL(#{addr2}, addr2), 
+			addr3=NVL(#{addr3}, addr3), 
+			updatedate=sysdate 
+		where userid=#{userid}
+	</update>
+	
+	<delete id="delete">
+		delete from users where userid=#{userid}
+	</delete>
+</mapper>
