@@ -22,6 +22,11 @@
 			<param-name>contextConfigLocation</param-name>
 			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
 		</init-param>
+		<!-- 예외처리 -->
+		<init-param>
+			<param-name>throwExceptionIfNoHandlerFound</param-name>
+			<param-value>true</param-value>
+		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 		
@@ -29,5 +34,32 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+
+<!-- 한글깨짐 해결 -->
+	<filter>
+		<filter-name>encoding</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter
+		</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encoding</filter-name>
+		<servlet-name>appServlet</servlet-name>
+	</filter-mapping>
+
+	<!-- upload설정 -->
+	<multipart-config>
+		<!-- 업로드파일위치 -->
+		<location>c:\\upload\\temp</location>
+		<!-- 최대 파일용량(개별) 1024*1024*20(MB) -->
+		<max-file-size>20971520</max-file-size>
+		<!-- 최대 파일용량(전체) 1024*1024*40(MB) -->
+		<max-request-size>41943040</max-request-size>
+		<!-- 임시파일저장 용량 한도 : 설정값이상이면 location에 저장 아니면 메모리에 유지 (20MB) -->
+		<file-size-threshold>20971520</file-size-threshold>
+	</multipart-config>
 
 </web-app>
