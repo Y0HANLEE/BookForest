@@ -50,4 +50,17 @@ public class UserServiceImpl implements UserService {
 			return 0;
 		}		
 	}
+	
+	@Override
+	public int chkId(String userid) {
+		log.info("-------Serivce : 'chkId' is running...");
+		
+		if(1==mapper.chkId(userid)) {
+			log.info("-------Already exist this ID");
+			return 1;
+		} else {
+			log.info("-------You can use this ID");
+			return 0;
+		}
+	}
 }

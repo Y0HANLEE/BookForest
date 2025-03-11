@@ -69,4 +69,14 @@ public class UserServiceTests {
 			log.info("---------Delete : fail");
 		}
 	}
+	
+	@Test
+	public void chkIdTest() {
+		String userid = "admin";
+		if(service.chkId(userid) == 1) {
+			log.info("-------Already exist this ID");
+		} else {
+			log.info("-------You can use this ID");
+		}
+	}
 }
