@@ -68,4 +68,9 @@ public class UserMapperTests {
 			log.warn("--------------------------fail");			
 		};
 	}
+	
+	@Test
+	public void chkIdTest() {
+		log.info("---------------Chk ID : "+mapper.chkId("user"));
+	}
 }

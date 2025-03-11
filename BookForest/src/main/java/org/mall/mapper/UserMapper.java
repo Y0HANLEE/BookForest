@@ -7,4 +7,6 @@ public interface UserMapper {
 	public UserVO read(String userid);
 	public int update(UserVO user);
 	public int delete(UserVO user);
+	
+	public int chkId(String userid);
 }
