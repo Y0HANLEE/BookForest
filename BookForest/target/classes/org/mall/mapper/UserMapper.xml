@@ -29,4 +29,8 @@
 	<delete id="delete">
 		delete from users where userid=#{userid}
 	</delete>
+	
+	<select id="chkId" resultType="int">
+		select count(*) from users where userid=#{userid}
+	</select>
 </mapper>
