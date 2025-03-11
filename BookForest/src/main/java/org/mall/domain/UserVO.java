@@ -2,6 +2,8 @@ package org.mall.domain;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import lombok.Data;
 
 @Data
@@ -10,6 +12,7 @@ public class UserVO {
 	private String userid;	//unique
 	private String userpw;
 	private String name;
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date birth;
 	private String phone;
 	private String email;
