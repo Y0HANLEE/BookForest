@@ -12,7 +12,7 @@
 					<input class="col-9 px-2 me-1 h-40p" name="userid">
 					<button class="btn btn-dark w-50p h-40p" id="chkId">Chk</button>
 				</div>
-				<div class="col-5 px-2 align-content-center text-danger">
+				<div class="col-5 px-2 align-content-center text-danger" id="idInfo">
 					
 				</div>
 			</div>
@@ -106,6 +106,21 @@
 		$("#chkId").click(function(e){
 			e.preventDefault();
 			
+			var userid = $("input[name='userid']").val();
+			//ID중복체크
+			$.ajax({
+				type:"post",
+				url:"/user/chkId",
+				data:{userid:userid},
+				success:function(result){
+					console.log("중복된 ID 개수 : "+result+"개");
+					if(result!=0){
+						$("#idInfo").html("중복된 ID가 존재합니다.").removeClass("text-success").addClass("text-danger");;
+					} else {
+						$("#idInfo").html("사용가능한 아이디입니다.").removeClass("text-danger").addClass("text-success");
+					}
+				}
+			});
 		});
 		
 		$("#chkPw").click(function(e){

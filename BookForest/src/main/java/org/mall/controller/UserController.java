@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import lombok.extern.log4j.Log4j;
 
@@ -29,6 +30,18 @@ public class UserController {
 		service.insert(user);
 		
 		return "redirect:/";
+	}
+	
+	//ID중복체크, ajax
+	@PostMapping("/chkId")
+	@ResponseBody
+	public int chkId(String userid) {
+		log.info("UserController...... /user/chkId");
+		if(service.chkId(userid) == 1) {
+			return 1;
+		} else {
+			return 0;
+		}
 	}
 	
 	//로그인페이지 진입
