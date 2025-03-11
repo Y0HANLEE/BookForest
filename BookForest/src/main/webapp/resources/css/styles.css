@@ -10,6 +10,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ 
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -24,6 +25,7 @@
   --bs-black: #000;
   --bs-white: #fff;
   --bs-gray: #6c757d;
+  
   --bs-gray-dark: #343a40;
   --bs-gray-100: #f8f9fa;
   --bs-gray-200: #e9ecef;
@@ -34,6 +36,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
+  
   --bs-primary: #0d6efd;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
@@ -42,6 +45,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
+  
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -54,6 +58,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
+  
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -67,14 +72,17 @@
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
   --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+  
   --bs-border-radius: 0.375rem;
   --bs-border-radius-sm: 0.25rem;
   --bs-border-radius-lg: 0.5rem;
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
+  
   --bs-link-color: #0d6efd;
   --bs-link-hover-color: #0a58ca;
+  
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -736,6 +744,16 @@ progress {
 .col-2 {
   flex: 0 0 auto;
   width: 16.66666667%;
+}
+
+.col-20 {
+  flex: 0 0 auto;
+  width: 20%;
+}
+
+.col-22 {
+  flex: 0 0 auto;
+  width: 22%;
 }
 
 .col-3 {
@@ -2790,7 +2808,7 @@ textarea.form-control-lg {
   color: var(--bs-btn-color);
   text-align: center;
   text-decoration: none;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -7292,6 +7310,10 @@ textarea.form-control-lg {
   height: 25% !important;
 }
 
+.h-30 {
+  height: 33.3333333333% !important; 
+}
+
 .h-50 {
   height: 50% !important;
 }
@@ -10823,4 +10845,114 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+
+.h-10p{
+	height: 10px;
+}
+.h-20p{
+	height: 20px;
+}
+.h-30p{
+	height: 30px;
+}
+.h-40p{
+	height: 40px;
+}
+.h-50p{
+	height: 50px;
+}
+.h-60p{
+	height: 60px;
+}
+.h-70p{
+	height: 70px;
+}
+.h-80p{
+	height: 80px;
+}
+.h-90p{
+	height: 90px;
+}
+.h-100p{
+	height: 100px;
+}
+.h-150p{
+	height: 150px;
+}
+.h-200p{
+	height: 200px;
+}
+.h-250p{
+	height: 250px;
+}
+.h-300p{
+	height: 300px;
+}
+.h-350p{
+	height: 350px;
+}
+.h-400p{
+	height: 400px;
+}
+.h-450p{
+	height: 450px;
+}
+.h-500p{
+	height: 500px;
+}
+
+.w-10p{
+	: 10px;
+}
+.w-20p{
+	width: 20px;
+}
+.w-30p{
+	width: 30px;
+}
+.w-40p{
+	width: 40px;
+}
+.w-50p{
+	width: 50px;
+}
+.w-60p{
+	width: 60px;
+}
+.w-70p{
+	width: 70px;
+}
+.w-80p{
+	width: 80px;
+}
+.w-90p{
+	width: 90px;
+}
+.w-100p{
+	width: 100px;
+}
+.w-150p{
+	width: 150px;
+}
+.w-200p{
+	width: 200px;
+}
+.w-250p{
+	width: 250px;
+}
+.w-300p{
+	width: 300px;
+}
+.w-350p{
+	width: 350px;
+}
+.w-400p{
+	width: 400px;
+}
+.w-450p{
+	width: 450px;
+}
+.w-500p{
+	width: 500px;
 }
